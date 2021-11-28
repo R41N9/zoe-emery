@@ -21,5 +21,5 @@ app.get('/', (req, res) => {
   res.send();
 });
 
-// http.createServer(app).listen(80);
+http.createServer(app).listen(80);
 https.createServer(options, app).listen(443);
