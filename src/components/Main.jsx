@@ -36,7 +36,7 @@ class Main extends React.Component {
     }
   }
 
-  handleContentClick() {
+  handleContactClick() {
     if (!this.state.contact) {
       this.setState({ contact: true });
     }
@@ -51,7 +51,7 @@ class Main extends React.Component {
   render() {
     return (
       <div id="main" className="box">
-        <Header handleContentClick={this.handleContentClick.bind(this)} handleHomeClick={this.handleHomeClick.bind(this)} contact={this.state.contact} />
+        <Header handleContactClick={this.handleContactClick.bind(this)} handleHomeClick={this.handleHomeClick.bind(this)} contact={this.state.contact} />
         {this.renderContent()}
         {this.renderReleases()}
         <Footer />

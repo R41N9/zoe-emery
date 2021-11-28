@@ -20,9 +20,9 @@ const ContactForm = function(props) {
   return (
     <div id="contact" className="content box">
       <form id="contact-form" ref={form} onSubmit={sendMail}>
-        <div id="contact-left-box" className="content-item box">
-          <div id="1-form-group" className="first left form-group content-left-item">
-            <label id="name-label" for="name">NAME</label>
+        <div id="contact-left" className="contact-column item">
+          <div id="1-form-group" className="first left form-group contact-left-item item">
+            <label id="name-label" htmlFor="name-input">NAME</label>
             <input
               id="name-input"
               className="input"
@@ -30,8 +30,8 @@ const ContactForm = function(props) {
               name="name"
               />
           </div>
-          <div id="2-form-group" className="left form-group content-left-item">
-            <label id="company-label" for="company">COMPANY</label>
+          <div id="2-form-group" className="left form-group contact-left-item item">
+            <label id="company-label" htmlFor="company-input">COMPANY</label>
             <input
               id="company-input"
               className="input"
@@ -39,8 +39,8 @@ const ContactForm = function(props) {
               name="company"
               />
           </div>
-          <div id="3-form-group" className="left form-group content-left-item">
-            <label id="phone-label" for="phone">PHONE</label>
+          <div id="3-form-group" className="left form-group contact-left-item item">
+            <label id="phone-label" htmlFor="phone-input">PHONE</label>
             <input
               id="phone-input"
               className="input"
@@ -48,8 +48,8 @@ const ContactForm = function(props) {
               name="phone"
               />
           </div>
-          <div id="4-form-group" className="last left form-group content-left-item">
-            <label id="email-label" for="email">EMAIL</label>
+          <div id="4-form-group" className="last left form-group contact-left-item item">
+            <label id="email-label" htmlFor="email-input">EMAIL</label>
             <input
               id="email-input"
               className="input"
@@ -58,16 +58,17 @@ const ContactForm = function(props) {
               />
           </div>
         </div>
-        <div id="contact-right-box" className="content-item box">
-          <div id="right-form-group" className="message right form-group content-right-item">
-            <label id="message-label" for="message">MESSAGE</label>
+        <div id="contact-right" className="contact-column">
+          <div id="right-form-group" className="message right form-group contact-right-item item">
+            <label id="message-label" htmlFor="message-input">MESSAGE</label>
             <textarea
               id="message-input"
+              className="input"
               name="message"
             />
             <button
               id="send-button"
-              className="content-right-item"
+              className="contact-right-item"
               value="Send"
               type="submit"
             >SEND</button>
