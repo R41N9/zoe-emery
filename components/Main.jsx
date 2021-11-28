@@ -14,6 +14,7 @@ class Main extends React.Component {
     this.renderContent = this.renderContent.bind(this);
     this.handleContentClick = this.handleContentClick.bind(this);
     this.handleHomeClick = this.handleHomeClick.bind(this);
+    this.renderNav = this.renderNav.bind(this);
   }
 
   renderContent() {
@@ -43,9 +44,9 @@ class Main extends React.Component {
 
   render() {
     return (
-      <div id="main">
-        <Header handleContentClick={handleContentClick} handleHomeClick={handleHomeClick}/>
-        {renderContent()}
+      <div id="main" className="box">
+        <Header handleContentClick={handleContentClick} handleHomeClick={handleHomeClick} contact={this.state.contact} />
+        {this.renderContent()}
         <Footer />
       </div>
     )

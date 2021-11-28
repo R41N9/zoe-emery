@@ -18,46 +18,56 @@ const ContactForm = function(props) {
   }
 
   return (
-    <div id="contact" className="content">
+    <div id="contact" className="content box">
       <form id="contact-form" ref={form} onSubmit={sendMail}>
-        <div className="first form-group">
-          <label for="name">NAME</label>
-          <input
-            type="text"
-            name="name"
-          />
+        <div id="contact-left-box" className="content-item box">
+          <div id="1-form-group" className="first left form-group content-left-item">
+            <label id="name-label" for="name">NAME</label>
+            <input
+              id="name-input"
+              type="text"
+              name="name"
+              />
+          </div>
+          <div id="2-form-group" className="left form-group content-left-item">
+            <label id="company-label" for="company">COMPANY</label>
+            <input
+              id="company-input"
+              type="text"
+              name="company"
+              />
+          </div>
+          <div id="3-form-group" className="left form-group content-left-item">
+            <label id="phone-label" for="phone">PHONE</label>
+            <input
+              id="phone-input"
+              type="text"
+              name="phone"
+              />
+          </div>
+          <div id="4-form-group" className="last left form-group content-left-item">
+            <label id="email-label" for="email">EMAIL</label>
+            <input
+              id="email-input"
+              type="text"
+              name="email"
+              />
+          </div>
         </div>
-        <div className="form-group">
-          <label for="company">COMPANY</label>
-          <input
-            type="text"
-            name="company"
-          />
-        </div>
-        <div className="form-group">
-          <label for="phone">PHONE</label>
-          <input
-            type="text"
-            name="phone"
-          />
-        </div>
-        <div className="last form-group">
-          <label for="email">EMAIL</label>
-          <input
-            type="text"
-            name="email"
-          />
-        </div>
-        <div className="message form-group">
-          <label for="message">MESSAGE</label>
-          <textarea
-            name="message"
-          />
-          <button
-            id="send-button"
-            value="Send"
-            type="submit"
-          >SEND</button>
+        <div id="contact-left-box" className="content-item box">
+          <div id="right-form-group" className="message right form-group content-right-item">
+            <label id="message-label" for="message">MESSAGE</label>
+            <textarea
+              id="message-input"
+              name="message"
+            />
+            <button
+              id="send-button"
+              className="content-right-item"
+              value="Send"
+              type="submit"
+            >SEND</button>
+          </div>
         </div>
       </form>
     </div>
