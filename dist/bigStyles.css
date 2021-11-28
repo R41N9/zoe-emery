@@ -146,6 +146,10 @@ span {
 
 /* ----------------RELEASES--------------- */
 
+#releases {
+  width: 100%;
+}
+
 #releases-title {
   width: 100%;
   text-align: center;

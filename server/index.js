@@ -1,15 +1,15 @@
 const express = require('express');
 const http = require('http');
-const https = require('https');
-const fs = require('fs');
+// const https = require('https');
+// const fs = require('fs');
 const compression = require('compression');
 const cors = require('cors');
 const path = require('path');
 
-const options = {
-  key: fs.readFileSync('dist/certs/openSSLkey.pem'),
-  cert: fs.readFileSync('dist/certs/zoe-emery.com.crt')
-};
+// const options = {
+//   key: fs.readFileSync("dist/certs/zoe-emery.com.pub", "utf8"),
+//   cert: fs.readFileSync("dist/certs/zoe-emery.com.crt", "utf8")
+// };
 
 const app = express();
 
@@ -21,5 +21,8 @@ app.get('/', (req, res) => {
   res.send();
 });
 
-http.createServer(app).listen(80);
-https.createServer(options, app).listen(443);
+const httpServer = http.createServer(app);
+// const httpsServer = https.createServer(options, app);
+
+httpServer.listen(80);
+// httpsServer.listen(443);
