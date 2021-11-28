@@ -25,6 +25,7 @@ const ContactForm = function(props) {
             <label id="name-label" for="name">NAME</label>
             <input
               id="name-input"
+              className="input"
               type="text"
               name="name"
               />
@@ -33,6 +34,7 @@ const ContactForm = function(props) {
             <label id="company-label" for="company">COMPANY</label>
             <input
               id="company-input"
+              className="input"
               type="text"
               name="company"
               />
@@ -41,6 +43,7 @@ const ContactForm = function(props) {
             <label id="phone-label" for="phone">PHONE</label>
             <input
               id="phone-input"
+              className="input"
               type="text"
               name="phone"
               />
@@ -49,12 +52,13 @@ const ContactForm = function(props) {
             <label id="email-label" for="email">EMAIL</label>
             <input
               id="email-input"
+              className="input"
               type="text"
               name="email"
               />
           </div>
         </div>
-        <div id="contact-left-box" className="content-item box">
+        <div id="contact-right-box" className="content-item box">
           <div id="right-form-group" className="message right form-group content-right-item">
             <label id="message-label" for="message">MESSAGE</label>
             <textarea
