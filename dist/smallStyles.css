@@ -1,0 +1,230 @@
+/* ----------------GLOBAL/MAIN--------------- */
+
+html {
+  overflow: visible;
+}
+
+:root {
+  --red: #CC0000;
+  --green: #006600;
+  background: var(--red);
+  color: var(--red);
+}
+
+#main {
+  overflow: visible;
+}
+
+.box {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.item {
+  margin: auto;
+}
+
+.content {
+  border: 20px solid var(--green);
+  padding: 10px;
+  margin: 30px;
+  position: relative;
+  background: black;
+  min-height: 0;
+}
+
+.content:after {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  bottom: -40px;
+  left: -40px;
+  background: black;
+  z-index: -1;
+}
+
+.flourish {
+  position: absolute;
+  width: 20%;
+}
+
+.top-right {
+  right: -1px;
+  top: 1px;
+  transform: rotate(90deg);
+}
+
+.bottom-left {
+  left: -1px;
+  bottom: 1px;
+  transform: rotate(270deg);
+}
+
+h2 {
+  font-size: 20px;
+}
+
+button {
+  background: none!important;
+  border: none;
+  color: var(--red);
+  font-size: 20px;
+}
+
+/* ----------------HEADER--------------- */
+
+#header {
+  width: 100%;
+}
+
+#header-top-row {
+  flex-direction: row;
+  align-self: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  font-size: 20px;
+  flex-basis: 100%;
+}
+
+.header-top-row-content {
+  width: 100%;
+}
+
+#genre {
+  margin-right: 5%;
+  margin-left: 2%;
+}
+
+.nav-button {
+  margin-left: 2%;
+  margin-top: 5%;
+}
+
+#title {
+  font-size: 96px;
+  font-style: italic;
+  font-weight: bold;
+  font-family: "SeaweedScript", Arial, sans-serif;
+  text-align: center;
+}
+
+#links {
+  width: 100%;
+  margin: 20px;
+  display: inline-block;
+}
+
+.link {
+  height: 60px;
+  margin: 1%;
+}
+
+.link-img {
+  height: 100%;
+}
+
+/* ----------------UPDATE--------------- */
+
+.update-item {
+  width: 100%;
+  margin: 1%;
+  position: relative;
+}
+
+#latest-release-indicator {
+  position: absolute;
+  bottom: 7px;
+  left: 7px;
+}
+
+#latest-release-img {
+  max-width: 100%;
+}
+
+span {
+  color: var(--red);
+  background: black;
+}
+
+/* ----------------RELEASES--------------- */
+
+#releases-title {
+  width: 100%;
+  text-align: center;
+  flex-grow: 3;
+}
+
+.releases-img {
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+.download {
+  flex-basis: 100%;
+  margin: 1%;
+}
+
+/* ----------------CONTACT--------------- */
+
+#contact {
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10%;
+}
+
+#contact-form {
+  width: 100%;
+}
+
+.contact-column {
+  width: 100%;
+  display: inline-block;
+}
+
+.contact-left {
+  float: left;
+  padding-right: 10%;
+}
+
+.contact-right {
+  float: right;
+  padding-left: 10%;
+}
+
+.input {
+  width: 95%;
+  margin-bottom: 7%;
+  border: none;
+  border-radius: 5px;
+  font-size: 17px;
+  padding: 3px;
+}
+
+.last {
+  margin-bottom: 0;
+}
+
+.form-group {
+  width: 100%;
+}
+
+label {
+  left: 0;
+  top: -15px;
+}
+
+#message-input {
+  height: 212px;
+}
+
+/* ----------------FOOTER--------------- */
+
+small {
+  font-size: 12pt;
+  color: black;
+}
