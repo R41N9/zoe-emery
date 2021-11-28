@@ -1,0 +1,55 @@
+{
+  "resolve": {
+    "fallback": {
+      "fs": "false",
+      "crypto": "false",
+      "zlib_bindings": "false",
+      "zlib": "false",
+      "stream": "false",
+      "url": "false",
+      "querystring": "false",
+      "http": "false",
+      "net": "false",
+      "buffer": "resolve.require('buffer')"
+    }
+  },
+  "scripts": {
+    "start": "nodemon --watch src --watch dist server/index.js",
+    "build": "npx webpack -w --mode development --config webpack.config.js"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.16.0",
+    "@material-ui/core": "^4.12.3",
+    "babel-loader": "^8.2.3",
+    "buffer": "^6.0.3",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "css-loader": "^6.5.1",
+    "emailjs-com": "^3.2.0",
+    "express": "^4.17.1",
+    "file-loader": "^6.2.0",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.15",
+    "path": "^0.12.7",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-fns": "^1.4.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.62.1"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.16.0",
+    "webpack-cli": "^4.9.1"
+  },
+  "nodemonConfig": {
+    "ext": "js",
+    "ignore": [
+      "*.test.ts",
+      "db/*"
+    ],
+    "delay": "2"
+  }
+}
