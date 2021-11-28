@@ -11,10 +11,6 @@ class Main extends React.Component {
   constructor(props) {
     super(props);
     this.state = { contact: false }
-    this.renderContent = this.renderContent.bind(this);
-    this.handleContentClick = this.handleContentClick.bind(this);
-    this.handleHomeClick = this.handleHomeClick.bind(this);
-    this.renderNav = this.renderNav.bind(this);
   }
 
   renderContent() {
@@ -25,8 +21,18 @@ class Main extends React.Component {
     } else {
       return (
         <Update />
+
+      )
+    }
+  }
+
+  renderReleases() {
+    if(!this.state.contact) {
+      return (
         <Releases />
       )
+    } else {
+      return null;
     }
   }
 
@@ -45,8 +51,9 @@ class Main extends React.Component {
   render() {
     return (
       <div id="main" className="box">
-        <Header handleContentClick={handleContentClick} handleHomeClick={handleHomeClick} contact={this.state.contact} />
+        <Header handleContentClick={this.handleContentClick.bind(this)} handleHomeClick={this.handleHomeClick.bind(this)} contact={this.state.contact} />
         {this.renderContent()}
+        {this.renderReleases()}
         <Footer />
       </div>
     )
