@@ -12,7 +12,8 @@ html {
 }
 
 #main {
-  overflow: visible;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 .box {
@@ -34,6 +35,7 @@ html {
   position: relative;
   background: black;
   min-height: 0;
+  max-width: 100%;
 }
 
 .content:after {
@@ -81,7 +83,7 @@ button {
   width: 100%;
 }
 
-#header-top-row {
+#header-top-row, #header-top-row-wrapper {
   flex-direction: row;
   align-self: flex-start;
   justify-content: flex-start;
@@ -90,18 +92,17 @@ button {
   flex-basis: 100%;
 }
 
-.header-top-row-content {
+.header-top-row-item {
   width: 100%;
 }
 
 #genre {
-  margin-right: 5%;
-  margin-left: 2%;
+  padding-bottom: 5px;
 }
 
 .nav-button {
-  margin-left: 2%;
-  margin-top: 5%;
+  text-align: start;
+  padding: 5px 0 5px 0;
 }
 
 #title {
@@ -220,6 +221,19 @@ label {
 
 #message-input {
   height: 212px;
+}
+
+/* ----------------ART--------------- */
+
+#art-title {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+.art-img {
+  flex-basis: 100%;
+  margin: 1%;
+  max-width: 100%;
 }
 
 /* ----------------FOOTER--------------- */

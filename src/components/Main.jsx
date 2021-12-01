@@ -4,30 +4,34 @@ import Header from "./Header.jsx";
 import Update from "./Update.jsx";
 import Releases from "./Releases.jsx";
 import ContactForm from "./ContactForm.jsx";
+import Art from "./Art.jsx";
 import Footer from "./Footer.jsx";
 
 
 class Main extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { contact: false }
+    this.state = { page: "home" }
   }
 
   renderContent() {
-    if (this.state.contact) {
+    if (this.state.page === "contact") {
       return (
         <ContactForm />
       )
-    } else {
+    } else if (this.state.page === "home") {
       return (
         <Update />
-
+      )
+    } else if (this.state.page === "art") {
+      return (
+        <Art />
       )
     }
   }
 
   renderReleases() {
-    if(!this.state.contact) {
+    if(this.state.page === "home") {
       return (
         <Releases />
       )
@@ -37,21 +41,21 @@ class Main extends React.Component {
   }
 
   handleContactClick() {
-    if (!this.state.contact) {
-      this.setState({ contact: true });
-    }
+    this.setState({ page: "contact" });
   }
 
   handleHomeClick() {
-    if (this.state.contact) {
-      this.setState({ contact: false });
-    }
+    this.setState({ page: "home" });
+  }
+
+  handleArtClick() {
+    this.setState({ page: "art" });
   }
 
   render() {
     return (
       <div id="main" className="box">
-        <Header handleContactClick={this.handleContactClick.bind(this)} handleHomeClick={this.handleHomeClick.bind(this)} contact={this.state.contact} />
+        <Header handleContactClick={this.handleContactClick.bind(this)} handleHomeClick={this.handleHomeClick.bind(this)} handleArtClick={this.handleArtClick.bind(this)} page={this.state.page} />
         {this.renderContent()}
         {this.renderReleases()}
         <Footer />

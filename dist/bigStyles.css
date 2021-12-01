@@ -75,21 +75,22 @@ button {
   width: 100%;
 }
 
-#header-top-row {
+#header-top-row, #header-top-row-wrapper {
   flex-direction: row;
   align-self: flex-start;
   justify-content: flex-start;
-  width: 100%;
-  font-size: 20px;
+  align-items: center;
   flex-basis: 100%;
+  font-size: 20px;
   display: inline-flex;
+  gap: 10%;
 }
 
-.header-top-row-content {
-  width: 33%;
+.header-top-row-item {
+  flex-basis: 20%;
 }
 
-#genre {
+/* #genre {
   margin-right: 10%;
   margin-left: 2%;
 }
@@ -97,7 +98,7 @@ button {
 .nav-button {
   text-align: center;
   margin-left: 10%;
-}
+} */
 
 #title {
   font-size: 112px;
@@ -218,6 +219,18 @@ label {
 
 #message-input {
   height: 212px;
+}
+
+/* ----------------ART--------------- */
+
+#art-title {
+  width: 100%;
+  text-align: center;
+}
+
+.art-img {
+  flex-basis: 28%;
+  margin: 1%;
 }
 
 /* ----------------FOOTER--------------- */
